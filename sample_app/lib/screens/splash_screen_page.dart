@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('/Users/kimdowon/IdeaProjects/sample_app/lib/assets/images/Nike-Logo.png'), fit: BoxFit.contain),
+            image: AssetImage('assets/images/NikeLogo.png'), fit: BoxFit.contain),
       ),
       child: Stack(
         children: <Widget>[
