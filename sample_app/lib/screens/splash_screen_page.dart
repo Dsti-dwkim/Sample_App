@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('assets/images/NikeLogo.png'), fit: BoxFit.contain),
+            image: AssetImage('lib/assets/images/NikeLogo.png'), fit: BoxFit.contain),
       ),
       child: Stack(
         children: <Widget>[
@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
               width: width,
               height: height,
               child: Scaffold(
-                backgroundColor: Colors.white,
+                backgroundColor: Colors.blue,
                 body: Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Center(),
