@@ -20,10 +20,11 @@ class _LoginPage extends State<LoginPage> {
     return MaterialApp(
       title: _title,
       home: Scaffold(
-        body: Container(
+        body: Center(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(30, 150, 30, 10),
+            padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
             child: ListView(
+              shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               children: <Widget>[
                 Container(
