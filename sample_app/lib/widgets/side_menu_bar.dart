@@ -10,9 +10,19 @@ class NavDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
-            child: Text(
-              'Side menu',
-              style: TextStyle(color: Colors.white, fontSize: 25),
+            child: Container(
+              padding: EdgeInsets.all(5),
+              child: ListView(
+                children: [
+                  Container(
+                    padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                    child: Text('김도원', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w800,color: Colors.blue),),
+                  ),
+                  Container(
+                    child: Text('dwkim@dsti.co.kr', style: TextStyle(color: Colors.grey),),
+                  ),
+                ],
+              ),
             ),
           ),
           ListTile(
@@ -38,10 +48,12 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Logout'),
-            onTap: () => {Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => LoginPage()),
-            )},
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LoginPage()),
+              )
+            },
           ),
         ],
       ),

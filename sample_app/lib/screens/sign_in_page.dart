@@ -22,22 +22,21 @@ class _SignInPage extends State<SignInPage> {
     return MaterialApp(
       title: _title,
       home: Scaffold(
-        body: Container(
+        body: Center(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(30, 150, 30, 10),
+            padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
             child: ListView(
+              shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               children: <Widget>[
 
                 // 타이틀
-                Container(
-                  child: const Text(
-                    "Sign Up Page",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 30,
-                    ),
+                const Text(
+                  "Sign Up Page",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 30,
                   ),
                 ),
                 Container(
@@ -171,7 +170,7 @@ class _SignInPage extends State<SignInPage> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => LoginPage()),
+                          MaterialPageRoute(builder: (context) => const LoginPage()),
                         );
                       },
                     ),

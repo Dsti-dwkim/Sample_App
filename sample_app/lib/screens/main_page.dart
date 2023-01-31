@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:sample_app/screens/login_page.dart';
 
 import '../widgets/side_menu_bar.dart';
 
@@ -48,11 +47,11 @@ class _MainPage extends State<MainPage> {
       home: Scaffold(
         endDrawer: NavDrawer(),
         appBar: AppBar(
-          title: const Text(
-            '차량 배차 시스템',
-            style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black),
+          title: Text(
+            '차량 예약',
+            style: TextStyle(fontWeight: FontWeight.w800, color: Colors.blue),
           ),
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: IconThemeData(color: Colors.black45),
           backgroundColor: Colors.white,
           elevation: 1,
 
@@ -67,9 +66,103 @@ class _MainPage extends State<MainPage> {
           ],
 
            */
-
         ),
-        body: Container(),
+        body: Container(
+          decoration: BoxDecoration(
+            color: Colors.grey,
+          ),
+          child: Column(
+            children: [
+              Expanded(
+                  flex: 1,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                    ),
+                    padding: EdgeInsets.all(10),
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(5),
+                          border: Border.all(
+                              width: 0.5, color: Colors.black.withOpacity(0.5)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.1),
+                              spreadRadius: 0.2,
+                              blurRadius: 1,
+                              offset: const Offset(0, 0.2),
+                            ),
+                          ]),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Icon(
+                            Icons.calendar_month,
+                            color: Colors.blue,
+                          ),
+                          const Text('이용시간 설정하기'),
+                          Text(
+                            '기간..${DateTime.now()}',
+                            style: const TextStyle(color: Colors.grey),
+                          )
+                        ],
+                      ),
+                    ),
+                  )),
+              Expanded(
+                flex: 9,
+                child: Container(
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                          width: 0.5, color: Colors.black.withOpacity(0.5)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.1),
+                          spreadRadius: 0.2,
+                          blurRadius: 1,
+                          offset: const Offset(0, 0.2),
+                        ),
+                      ]),
+                  child: ListView(
+                    children: [
+                      Container(
+                        height: 150,
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(5),
+                          border: Border.all(
+                              width: 0.5, color: Colors.black.withOpacity(0.5)),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Expanded(
+                              flex: 4,
+                              child: Image.asset('assets/images/seltos.png'),
+                            ),
+                            Expanded(
+                              flex: 6,
+                              child: Column(
+                                children: [],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+
         /*
         body: Column(
           children: [
