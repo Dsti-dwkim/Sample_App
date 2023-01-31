@@ -133,14 +133,7 @@ class _MainPage extends State<MainPage> {
                       Container(
                         height: 150,
                         padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5),
-                          border: Border.all(
-                              width: 0.5, color: Colors.black.withOpacity(0.5)),
-                        ),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Expanded(
                               flex: 4,
@@ -149,7 +142,18 @@ class _MainPage extends State<MainPage> {
                             Expanded(
                               flex: 6,
                               child: Column(
-                                children: [],
+                                children: [
+                                  Container(
+                                    child: Text('셀토스', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20)),
+                                    padding: EdgeInsets.only(top: 5, left: 15),
+                                    alignment: Alignment.centerLeft,
+                                  ),
+                                  Container(
+                                    child: Text('162허 1729', style: TextStyle(fontSize: 15, color: Colors.grey),),
+                                    padding: EdgeInsets.only(top: 5, bottom: 5, left: 15),
+                                    alignment: Alignment.centerLeft,
+                                  ),
+                                ],
                               ),
                             ),
                           ],
