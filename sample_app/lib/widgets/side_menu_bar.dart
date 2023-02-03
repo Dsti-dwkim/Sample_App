@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../screens/date_picker.dart';
-import '../screens/map_page.dart';
 import '../screens/login_page.dart';
 
 class NavDrawer extends StatelessWidget {
