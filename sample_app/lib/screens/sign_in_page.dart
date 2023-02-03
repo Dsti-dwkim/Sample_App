@@ -29,7 +29,6 @@ class _SignInPage extends State<SignInPage> {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               children: <Widget>[
-
                 // 타이틀
                 const Text(
                   "Sign Up Page",
@@ -152,8 +151,8 @@ class _SignInPage extends State<SignInPage> {
                           alignment: Alignment.center,
                           child: const Text(
                             'Sign Up',
-                            style:
-                            TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w600),
                           ),
                         ),
                       ),
@@ -170,7 +169,8 @@ class _SignInPage extends State<SignInPage> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const LoginPage()),
+                          MaterialPageRoute(
+                              builder: (context) => const LoginPage()),
                         );
                       },
                     ),

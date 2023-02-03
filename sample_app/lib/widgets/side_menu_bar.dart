@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/date_picker.dart';
+import '../screens/map_page.dart';
 import '../screens/login_page.dart';
 
 class NavDrawer extends StatelessWidget {
@@ -7,19 +9,30 @@ class NavDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
+        physics: const NeverScrollableScrollPhysics(),
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
             child: Container(
               padding: EdgeInsets.all(5),
               child: ListView(
+                physics: const NeverScrollableScrollPhysics(),
                 children: [
                   Container(
                     padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-                    child: Text('김도원', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w800,color: Colors.blue),),
+                    child: Text(
+                      '김도원',
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.blue),
+                    ),
                   ),
                   Container(
-                    child: Text('dwkim@dsti.co.kr', style: TextStyle(color: Colors.grey),),
+                    child: Text(
+                      'dwkim@dsti.co.kr',
+                      style: TextStyle(color: Colors.grey),
+                    ),
                   ),
                 ],
               ),

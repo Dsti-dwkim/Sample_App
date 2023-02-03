@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:sample_app/screens/login_page.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -13,10 +15,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 4),
+      const Duration(seconds: 4),
       () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => LoginPage()),
+        MaterialPageRoute(builder: (context) => const LoginPage()),
       ),
     );
   }
@@ -27,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     double height = MediaQuery.of(context).size.height;
 
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/images/logo.png'),
             fit: BoxFit.contain),
@@ -37,10 +39,10 @@ class _SplashScreenState extends State<SplashScreen> {
           Positioned(
             top: 0.0,
             left: 0.0,
-            child: Container(
+            child: SizedBox(
               width: width,
               height: height,
-              child: Scaffold(
+              child: const Scaffold(
                 backgroundColor: Colors.blue,
                 body: Padding(
                   padding: EdgeInsets.all(8.0),

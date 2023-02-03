@@ -27,14 +27,12 @@ class _LoginPage extends State<LoginPage> {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               children: <Widget>[
-                Container(
-                  child: const Text(
-                    "Login Page",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 30,
-                    ),
+                const Text(
+                  "Login Page",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 30,
                   ),
                 ),
                 Container(
@@ -113,7 +111,7 @@ class _LoginPage extends State<LoginPage> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => MainPage()),
+                          MaterialPageRoute(builder: (context) => const MainPage()),
                         );
                       },
                     ),
@@ -132,7 +130,7 @@ class _LoginPage extends State<LoginPage> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SignInPage()),
+                          MaterialPageRoute(builder: (context) => const SignInPage()),
                         );
                       },
                       child: const Text('Does not have account?'),
